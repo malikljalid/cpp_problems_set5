@@ -49,8 +49,10 @@ int main(void)
     else 
         std::cout << "\n\nNo List is not Empty.\n";
 
-    MydblLinkedList.clear();
-    std::cout << "\nNumber of items in the linked list = " << MydblLinkedList.size();
+    MydblLinkedList.reverse();
+
+    std::cout << "\nLinked List Contenet after reverse:\n";
+    MydblLinkedList.printList();
 
     return (0);
 }
