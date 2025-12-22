@@ -220,6 +220,11 @@ template <class data> class clsDoublyLinkedList
         return (_size);
     }
 
+    bool isEmpty(void)
+    {
+        return (_size == 0);
+    }
+
     void printList()
     {
         clsDoublyLinkedList *head_ = head;
