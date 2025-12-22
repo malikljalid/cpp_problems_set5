@@ -225,6 +225,12 @@ template <class data> class clsDoublyLinkedList
         return (_size == 0);
     }
 
+    void clear(void)
+    {
+        while (_size != 0)
+            deleteLastNode();
+    }
+
     void printList()
     {
         clsDoublyLinkedList *head_ = head;
