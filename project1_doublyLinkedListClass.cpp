@@ -43,6 +43,5 @@ int main(void)
     MydblLinkedList.printList();
 
     std::cout << "\nNumber of items in the linked list = " << MydblLinkedList.size();
-
     return (0);
 }
