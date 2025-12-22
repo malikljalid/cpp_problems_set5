@@ -70,6 +70,15 @@ template <class data> class clsDoublyLinkedList
         }
     }
 
+    void _swap(clsDoublyLinkedList* &N1, clsDoublyLinkedList* &N2)
+    {
+        clsDoublyLinkedList *tmp = NULL;
+
+        tmp = N1;
+        N1 = N2;
+        N2 = tmp;
+    }
+
     public:
     clsDoublyLinkedList(void)
     {
@@ -184,6 +193,7 @@ template <class data> class clsDoublyLinkedList
         {
             delete head;
             head = NULL;
+            _size--;
             return;
         }
 
@@ -227,8 +237,28 @@ template <class data> class clsDoublyLinkedList
 
     void clear(void)
     {
-        while (_size != 0)
-            deleteLastNode();
+        while (_size > 0)
+            deleteFirstNode();
+    }
+
+    void reverse(void)
+    {
+        clsDoublyLinkedList* current = head;
+        clsDoublyLinkedList* temp = nullptr;
+
+        while (current != nullptr)
+        {
+            temp = current->getPrev();
+            current->setPrev(current->getNext());
+            current->setNext(temp);
+
+            current = current->getPrev();
+        }
+
+        if (temp != nullptr)
+        {
+            head = temp->getPrev();
+        }
     }
 
     void printList()
