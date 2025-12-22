@@ -49,5 +49,8 @@ int main(void)
     else 
         std::cout << "\n\nNo List is not Empty.\n";
 
+    MydblLinkedList.clear();
+    std::cout << "\nNumber of items in the linked list = " << MydblLinkedList.size();
+
     return (0);
 }
