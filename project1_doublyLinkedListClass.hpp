@@ -231,4 +231,5 @@ template <class data> class clsDoublyLinkedList
         }
         std::cout << "\n";
     }
+
 };
