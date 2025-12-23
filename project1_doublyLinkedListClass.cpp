@@ -54,5 +54,10 @@ int main(void)
     std::cout << "\nLinked List Contenet after reverse:\n";
     MydblLinkedList.printList();
 
+    clsDoublyLinkedList<int> *N3;
+
+    N3 = MydblLinkedList.getNode(1);
+
+    std::cout << "\nNode Value is: " << N3->getValue();
     return (0);
 }
