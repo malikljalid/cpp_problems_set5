@@ -302,4 +302,30 @@ template <class data> class clsDoublyLinkedList
 
         return (node->getValue());
     }
+
+    bool updateItem(int index, data value)
+    {
+        clsDoublyLinkedList *node = getNode(index);
+
+        if (node == NULL)
+            return (false);
+        else
+        {
+            node->setValue(value);
+            return (true);
+        }
+    }
+
+    bool insertAfter(int index, data value)
+    {
+        clsDoublyLinkedList *node = getNode(index);
+
+        if (node == NULL)
+            return (false);
+        else
+        {
+            insertAfter(node, value);
+            return (true);
+        }
+    }
 };
