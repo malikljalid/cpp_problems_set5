@@ -15,11 +15,6 @@ template <class data> class clsDoublyLinkedList
 
 
     private:
-    data getValue(void)
-    {
-        return (_value);
-    }
-
     clsDoublyLinkedList *getNext(void)
     {
         return (_next);
@@ -86,6 +81,11 @@ template <class data> class clsDoublyLinkedList
         _prev = NULL;
         head  = NULL;
         _size = 0;
+    }
+
+    data getValue(void)
+    {
+        return (_value);
     }
 
     void insertAtBeginning(data value) 
@@ -271,5 +271,35 @@ template <class data> class clsDoublyLinkedList
             head_ = head_->_next;
         }
         std::cout << "\n";
+    }
+
+    clsDoublyLinkedList *getNode(int index)
+    {
+        clsDoublyLinkedList *current = head;
+        int                        i = 0;
+
+        if (index > _size && index < 0)
+            return (NULL);
+
+        while (current != NULL)
+        {
+            if (i == index)
+                return (current);
+
+            current = current->getNext();
+            i++;
+        }
+
+        return (NULL);
+    }
+
+    data getItem(int index)
+    {
+        clsDoublyLinkedList *node = getNode(index);
+
+        if (node == NULL)
+            return (-1);
+
+        return (node->getValue());
     }
 };
