@@ -65,6 +65,10 @@ int main(void)
     std::cout << "\nAfter Updating Item(2): " <<"\n";
     MydblLinkedList.printList();
 
-    
+    MydblLinkedList.insertAfter(4, 500);
+
+    std::cout << "\nAfter insert 500 in pos 4 : \n";
+    MydblLinkedList.printList();
+
     return (0);
 }
