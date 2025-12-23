@@ -59,5 +59,12 @@ int main(void)
     N3 = MydblLinkedList.getNode(1);
 
     std::cout << "\nNode Value is: " << N3->getValue();
+
+    MydblLinkedList.updateItem(2, 500);
+
+    std::cout << "\nAfter Updating Item(2): " <<"\n";
+    MydblLinkedList.printList();
+
+    
     return (0);
 }
