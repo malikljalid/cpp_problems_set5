@@ -6,7 +6,7 @@
 template <class data> class clsQueue
 {
 
-private:
+protected:
 	clsDoublyLinkedList <data> _MyList;
 
 public:
