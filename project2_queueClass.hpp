@@ -44,5 +44,40 @@ public:
 	data back()
 	{
 		return _MyList.getItem(size() - 1);
-	}	
+    }
+
+    data getItem(int index)
+    {
+        return _MyList.getItem(index);
+    }
+
+    void reverse(void)
+    {
+        return _MyList.reverse();
+    }
+
+    bool updateItem(int index, data value)
+    {
+        return _MyList.updateItem(index, value);
+    }
+
+    void insertAfter(int index, data value)
+    {
+        _MyList.insertAfter(index, value);
+    }
+
+    void insertAtFront(data value)
+    {
+        _MyList.insertAtBeginning(value);
+    }
+
+    void insertAtBack(data value)
+    {
+        _MyList.insertAtEnd(value);
+    }
+
+    void clear(void)
+    {
+        _MyList.clear();
+    }
 };
