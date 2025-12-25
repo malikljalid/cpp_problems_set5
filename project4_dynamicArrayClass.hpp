@@ -83,4 +83,36 @@ public:
         OriginalArray = _TempArray;
     }
 
+    data GetItem(int index)
+    {
+        return OriginalArray[index];
+    }
+
+
+    void  Reverse()
+    {
+
+        _TempArray = new data[_Size];
+
+        int counter = 0;
+
+        for (int i = _Size - 1; i >= 0; i--)
+        {
+            _TempArray[counter] = OriginalArray[i];
+            counter++;
+        }
+
+        delete[] OriginalArray;
+        OriginalArray = _TempArray;
+
+    }
+
+    void Clear()
+    {
+        _Size = 0;
+        _TempArray = new data[0];
+
+        delete[] OriginalArray;
+        OriginalArray = _TempArray;
+    }
 };
