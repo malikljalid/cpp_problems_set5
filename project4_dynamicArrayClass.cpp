@@ -17,5 +17,10 @@ int main()
 
     MyDynamicArray.PrintList();
 
+    MyDynamicArray.Resize(10);
+    std::cout << "\nArray Size: " << MyDynamicArray.Size() << "\n";
+    std::cout << "\nArray Items after resize to 10 : \n";
+    MyDynamicArray.PrintList();
+
     return (0);
 }
