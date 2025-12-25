@@ -40,5 +40,16 @@ int main()
     std::cout << "\nArray Size: " << MyDynamicArray.Size() << "\n";
     MyDynamicArray.PrintList();
 
+
+    MyDynamicArray.DeleteFirstItem();
+    std::cout << "\nArray Items after deleting FirstItem: \n";
+    std::cout << "\nArray Size: " << MyDynamicArray.Size() << "\n";
+    MyDynamicArray.PrintList();
+
+    MyDynamicArray.DeleteLastItem();
+    std::cout << "\nArray Items after deleting LastItem: \n";
+    std::cout << "\nArray Size: " << MyDynamicArray.Size() << "\n";
+    MyDynamicArray.PrintList();
+
     return (0);
 }
