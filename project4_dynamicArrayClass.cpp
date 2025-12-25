@@ -51,5 +51,16 @@ int main()
     std::cout << "\nArray Size: " << MyDynamicArray.Size() << "\n";
     MyDynamicArray.PrintList();
 
+    int Index = MyDynamicArray.Find(30);
+    if (Index ==-1)
+        std::cout << "\nItem was not Found :-(\n ";
+    else
+        std::cout << "\n30 is found at index : " << Index;
+    
+    MyDynamicArray.DeleteItem(30);
+    std::cout << "\n\nArray Items after deleting 30:";
+    std::cout << "\nArray Size: " << MyDynamicArray.Size() << "\n";
+    MyDynamicArray.PrintList();
+
     return (0);
 }
