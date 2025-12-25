@@ -35,5 +35,10 @@ int main()
     std::cout << "\nArray Items after clear: \n";
     MyDynamicArray.PrintList();
 
+    MyDynamicArray.DeleteItemAt(2);
+    std::cout << "\nArray Items after deleting item(2): \n";
+    std::cout << "\nArray Size: " << MyDynamicArray.Size() << "\n";
+    MyDynamicArray.PrintList();
+
     return (0);
 }
