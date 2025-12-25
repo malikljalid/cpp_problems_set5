@@ -62,8 +62,29 @@ int main()
     std::cout << "\nArray Size: " << MyDynamicArray.Size() << "\n";
     MyDynamicArray.PrintList();
 
-    MyDynamicArray.InsertAt(2,500);
+    MyDynamicArray.InsertAt(2, 500);
     std::cout << "\n\nArray after insert 500 at index 2:";
+    std::cout << "\nArray Size: " << MyDynamicArray.Size() << "\n";
+    MyDynamicArray.PrintList();
+
+    MyDynamicArray.InsertAtBeginning( 400);
+    std::cout << "\n\nArray after insert 400 at Begining:";
+    std::cout << "\nArray Size: " << MyDynamicArray.Size() << "\n";
+    MyDynamicArray.PrintList();
+
+    MyDynamicArray.InsertBefore(2,500);
+    std::cout << "\n\nArray after insert 500 before index 2:";
+    std::cout << "\nArray Size: " << MyDynamicArray.Size() << "\n";
+    MyDynamicArray.PrintList();
+
+    MyDynamicArray.InsertAfter(2, 600);
+    std::cout << "\n\nArray after insert 600 after index 2:";
+    std::cout << "\nArray Size: " << MyDynamicArray.Size() << "\n";
+    MyDynamicArray.PrintList();
+
+
+    MyDynamicArray.InsertAtEnd(800);
+    std::cout << "\n\nArray after insert 800 at End:";
     std::cout << "\nArray Size: " << MyDynamicArray.Size() << "\n";
     MyDynamicArray.PrintList();
 
