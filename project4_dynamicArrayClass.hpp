@@ -219,4 +219,38 @@ public:
         return true;
 
     }
+
+    void InsertAtBeginning(data value)
+    {
+
+        InsertAt(0, value);
+
+    }
+
+
+    bool InsertBefore(data index, data value)
+    {
+        if (index < 1)
+            return InsertAt(0, value);
+        else
+            return InsertAt(index - 1, value);
+
+    }
+
+    bool InsertAfter(data index, data value)
+    {
+        if (index >= _Size)
+            return InsertAt(_Size - 1, value);
+        else
+            return InsertAt(index + 1, value);
+
+    }
+
+    bool InsertAtEnd(data value)
+    {
+
+        return InsertAt(_Size, value);
+
+    }
+
 };
