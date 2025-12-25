@@ -52,7 +52,7 @@ int main()
     MyDynamicArray.PrintList();
 
     int Index = MyDynamicArray.Find(30);
-    if (Index ==-1)
+    if (Index == -1)
         std::cout << "\nItem was not Found :-(\n ";
     else
         std::cout << "\n30 is found at index : " << Index;
