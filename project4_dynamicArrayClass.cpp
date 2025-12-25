@@ -22,5 +22,18 @@ int main()
     std::cout << "\nArray Items after resize to 10 : \n";
     MyDynamicArray.PrintList();
 
+    std::cout << "\nItem(2): " << MyDynamicArray.GetItem(2) << "\n";
+
+
+    MyDynamicArray.Reverse();
+
+    std::cout << "\nArray Items after reverse: \n";
+    MyDynamicArray.PrintList();
+
+    MyDynamicArray.Clear();
+
+    std::cout << "\nArray Items after clear: \n";
+    MyDynamicArray.PrintList();
+
     return (0);
 }
